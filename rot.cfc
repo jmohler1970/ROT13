@@ -38,11 +38,9 @@ string function rot5(required string inString) output="false"	{
 	for (var i = 1; i <= Len(arguments.inString); i++){
 		j = asc(Mid(arguments.inString, i, 1));
 		if (j >= asc("0") && j <= asc("9")) {
-			j <= asc("5") ? j += 5 : j -= 5;
+			if (j <= asc("5")) j += 5; else j -= 5;
 			}	
-		}
-	}
-	
+
 	out &= chr(j);
 	} // end for
 
