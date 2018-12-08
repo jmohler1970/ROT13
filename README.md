@@ -1,7 +1,10 @@
 # Usage
 
 
-`result = invoke("rot", "rot13_5", yourString);`
+`result = invoke("rot", "rot5", yourString);`
+`result = invoke("rot", "rot13", yourString);`
+`result = invoke("rot", "rot18", yourString);`
+`result = invoke("rot", "rot47", yourString);`
 
 # Resources
 
