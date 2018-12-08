@@ -18,7 +18,7 @@ string function rot13(required string inString) output="false"	{
 	for (var i = 1; i <= Len(arguments.inString); i++){
 		j = asc(Mid(arguments.inString, i, 1));
 		if(j >= asc("A") && j <= asc("Z")) {
-			j = ((J - 52) % 26) + asc("A");
+			j = ((j - 52) % 26) + asc("A");
 		}
 		else if(j >= asc("a") && j <= asc("z")) {
 			j = ((j - 84) % 26) + asc("a");
@@ -47,10 +47,27 @@ string function rot5(required string inString) output="false"	{
 	return out;
 }
 
-string function rot13_5(required string inString) output="false"	{
+string function rot18(required string inString) output="false"	{
 
 	return this.rot5(this.rot13(arguments.inString));
 	}
+
+
+string function rot47(required string inString) output="false"	{
+
+	var j = 0;
+	var k = 0;
+	var out = "";
+	for (var i = 1; i <= Len(arguments.inString); i++){
+		j = asc(Mid(arguments.inString, i, 1));
+		if(j >= asc("!") && j <= asc("~")) {
+			j = ((j + 14) % 94) + asc("!");
+		}
+		out &= Chr(j);
+	} // end for
+
+	return out;
+}
 
 } // end component
 
