@@ -8,7 +8,8 @@
 
 # Resources
 
-https://cflib.org/udf/Rot13
+- https://cflib.org/udf/Rot13
 
+- https://stackoverflow.com/questions/53773254/magic-number-removal-on-rot13-in-coldfusion
 
 

@@ -12,11 +12,9 @@ component output="false" {
 
 string function rot13(required string inString) output="false"	{
 
-	var j = 0;
-	var k = 0;
 	var out = "";
 	for (var i = 1; i <= Len(arguments.inString); i++){
-		j = asc(Mid(arguments.inString, i, 1));
+		var j = asc(Mid(arguments.inString, i, 1));
 		if(j >= asc("A") && j <= asc("Z")) {
 			j = ((j - 52) % 26) + asc("A");
 		}
@@ -32,11 +30,9 @@ string function rot13(required string inString) output="false"	{
 
 string function rot5(required string inString) output="false"	{
 
-	var j = 0;
-	var k = 0;
 	var out = "";
 	for (var i = 1; i <= Len(arguments.inString); i++){
-		j = asc(Mid(arguments.inString, i, 1));
+		var j = asc(Mid(arguments.inString, i, 1));
 		if (j >= asc("0") && j <= asc("9")) {
 			if (j <= asc("5")) j += 5; else j -= 5;
 			}	
@@ -55,11 +51,9 @@ string function rot18(required string inString) output="false"	{
 
 string function rot47(required string inString) output="false"	{
 
-	var j = 0;
-	var k = 0;
 	var out = "";
 	for (var i = 1; i <= Len(arguments.inString); i++){
-		j = asc(Mid(arguments.inString, i, 1));
+		var j = asc(Mid(arguments.inString, i, 1));
 		if(j >= asc("!") && j <= asc("~")) {
 			j = ((j + 14) % 94) + asc("!");
 		}
